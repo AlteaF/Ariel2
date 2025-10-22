@@ -1,0 +1,15 @@
+numpy
+argcomplete
+scikit-learn
+tqdm
+regex
+matplotlib
+umap-learn
+opencv-contrib-python
+opencv-python
+opencv-python-headless
+torch
+torchvision
+transformers
+timm
+joblib

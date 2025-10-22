@@ -1,0 +1,2 @@
+algorithm,Pearson(AMI*Silhouette),Pearson_p_value,Pearson_significance
+k_means,0.8090988577055578,0.027513839874909095,Significant
