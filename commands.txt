@@ -39,28 +39,28 @@ remember to grayscale the images
 extracting embeddings for training data 
 
 a) ResNet50 
-    python3 extract_embeddings.py --image_dir ../dataset/cropped/cropped_train --output_file ../embeddings_files/resnet_embeddings_train.npz
+    python3 extract_embeddings.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_train --output_file ../embeddings_files/resnet_embeddings_train.npz
  b) resNet gray #doing
-        python3 extract_embeddings.py --image_dir ../dataset/cropped/cropped_train_gray --output_file ../embeddings_files/resnet_embeddings_train_gray.npz
+        python3 extract_embeddings.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_train_gray --output_file ../embeddings_files/resnet_embeddings_train_gray.npz
 
 c) DINOv2
-    python3 extract_embeddings_dinov2.py --image_dir ../dataset/cropped/cropped_train  --output_file ../embeddings_files/dino_embeddings_train.npz
+    python3 extract_embeddings_dinov2.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_train  --output_file ../embeddings_files/dino_embeddings_train.npz
 
  d) DINOv2 gray
-    python3 extract_embeddings_dinov2.py --image_dir ../dataset/cropped/cropped_train_gray  --output_file ../embeddings_files/dino_embeddings_train_gray.npz
+    python3 extract_embeddings_dinov2.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_train_gray  --output_file ../embeddings_files/dino_embeddings_train_gray.npz
 
 extracting embeddings for test data 
 
-a) ResNet50  # TODO
+a) ResNet50  
     python3 extract_embeddings.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_test --output_file ../embeddings_files/resnet_embeddings_test.npz
- b) resNet gray # TODO
-        python3 extract_embeddings.py --image_dir ../dataset/cropped/cropped_test_gray --output_file ../embeddings_files/resnet_embeddings_test_gray.npz
+ b) resNet gray 
+    python3 extract_embeddings.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_test_gray --output_file ../embeddings_files/resnet_embeddings_test_gray.npz
 
 c) DINOv2
-    python3 extract_embeddings_dinov2.py --image_dir ../dataset/cropped/cropped_test  --output_file ../embeddings_files/dino_embeddings_test.npz
+    python3 extract_embeddings_dinov2.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_test  --output_file ../embeddings_files/dino_embeddings_test.npz
 
-d) DINOv2 gray # TODO
-        python3 extract_embeddings_dinov2.py --image_dir ../dataset/cropped/cropped_test_gray  --output_file ../embeddings_files/dino_embeddings_test_gray.npz
+d) DINOv2 gray 
+    python3 extract_embeddings_dinov2.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_test_gray  --output_file ../embeddings_files/dino_embeddings_test_gray.npz
 
 
 
@@ -71,29 +71,29 @@ Normalise embeddings
 a) ResNet50 
     python3 embeddings_normaliser.py --input_file ../embeddings_files/resnet_embeddings_train.npz --output_file ../normalised_embeddings/resnet_normalised_embeddings_train.npz
 
-b)ResNet50 Gray # TODO
+b)ResNet50 Gray
         python3 embeddings_normaliser.py --input_file ../embeddings_files/resnet_embeddings_train_gray.npz --output_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz
 
 c) DINOv2 
     python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_train.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_train.npz
 
-d) DINOv2 Gray # TODO
-        python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_train_gray.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz
+d) DINOv2 Gray
+    python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_train_gray.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz
 
 Normalise ebeddings test
-a) ResNet50  #TODO
+a) ResNet50 
     python3 embeddings_normaliser.py --input_file ../embeddings_files/resnet_embeddings_test.npz --output_file ../normalised_embeddings/resnet_normalised_embeddings_test.npz
 
-b)ResNet50 Gray # TODO
-        python3 embeddings_normaliser.py --input_file ../embeddings_files/resnet_embeddings_test_gray.npz --output_file ../normalised_embeddings/resnet_normalised_embeddings_test_gray.npz
+b)ResNet50 Gray 
+    python3 embeddings_normaliser.py --input_file ../embeddings_files/resnet_embeddings_test_gray.npz --output_file ../normalised_embeddings/resnet_normalised_embeddings_test_gray.npz
 
 c) DINOv2 
     python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_test.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_test.npz
 
-d) DINOv2 Gray # TODO
-        python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_test_gray.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_test_gray.npz
+d) DINOv2 Gray 
+    python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_test_gray.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_test_gray.npz
 
-
+----------------------------------------------------------------------------------------------------
 
 K-means not normalised 
 
@@ -112,7 +112,7 @@ i) resnet50, rgb, not normalised, 9 classes
  ii) resnet50, grayscale, not normalised, 9 classes 
     python3 k_means.py --embedding_file ../embeddings_files/resnet_embeddings_train_gray.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_resnet_gray.npz
     python3 ami.py --clustered_file ../k_means_clusters/k_means_resnet_gray.npz
-    --> 
+    --> 0.2214
     python3 compute_cluster_metrics.py --clustered_file ../k_means_clusters/k_means_resnet_gray.npz --csv_file ../metrics_results/k_means_resnet_gray.csv
 
 iii) DINOv2 rgb, not normalised, 9 classes 
@@ -124,7 +124,7 @@ iii) DINOv2 rgb, not normalised, 9 classes
 iv) DINOv2 gray, not normalised, 9 classes 
     python3 k_means.py --embedding_file ../embeddings_files/dino_embeddings_train_gray.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_dino_gray.npz
     python3 ami.py --clustered_file ../k_means_clusters/k_means_dino_gray.npz
-    --> 
+    --> 0.2430
     python3 compute_cluster_metrics.py --clustered_file ../k_means_clusters/k_means_dino_gray.npz --csv_file ../metrics_results/k_means_dino_gray.csv
 
 K-means + ami score -- normalised 
@@ -132,18 +132,18 @@ K-means + ami score -- normalised
 i) resnet 50, rgb, normalised, 9 classes 
     python3 k_means.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_resnet_rgb_normalised.npz
     python3 ami.py --clustered_file ../k_means_clusters/k_means_resnet_rgb_normalised.npz
---> 0.1933  and with the normalisation on axis = 0  -->0.1886
+--> -->0.1886
     python3 compute_cluster_metrics.py --clustered_file ../k_means_clusters/k_means_resnet_rgb_normalised.npz --csv_file ../metrics_results/k_means_resnet_rgb_normalised.csv
 
 ii) resnet50, grayscale, normalised, 9 classes 
     python3 k_means.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_resnet_gray_normalised.npz
     python3 ami.py --clustered_file ../k_means_clusters/k_means_resnet_gray_normalised.npz
-    --> 
+    --> 0.2099
     python3 compute_cluster_metrics.py --clustered_file ../k_means_clusters/k_means_resnet_gray_normalised.npz --csv_file ../metrics_results/k_means_resnet_gray_normalised.csv
 iii) DINOv2, rgb, normalised, 9 classes 
     python3 k_means.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_dino_rgb_normalised.npz
     python3 ami.py --clustered_file ../k_means_clusters/k_means_dino_rgb_normalised.npz
-    --> 0.2371 and with the normalisation on the axis=0 : 0.2531
+    --> 0.2531
     python3 compute_cluster_metrics.py --clustered_file ../k_means_clusters/k_means_dino_rgb_normalised.npz --csv_file ../metrics_results/k_means_dino_rgb_normalised.csv
 
 mosaic thing 
@@ -151,13 +151,14 @@ mosaic thing
     python3 cluster_label_distribution_normalised.py --clustered_file ../k_means_clusters/k_means_dino_rgb_normalised.npz --save_csv ../mosaic_results/cluster_label_distribution_km_dino_rgb.csv
 
 
-
-
 iv) dinov2, grayscale, normalised, 9 classes
-    python3 k_means.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_dino_gray_normalised.npz
+    python3 k_means.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_dino_gray_normalised.npz
     python3 ami.py --clustered_file ../k_means_clusters/k_means_dino_gray_normalised.npz
-    --> 
+    --> 0.2435
+
     python3 compute_cluster_metrics.py --clustered_file ../k_means_clusters/k_means_dino_gray_normalised.npz --csv_file ../metrics_results/k_means_dino_gray_normalised.csv
+
+----------------------------------------------------------------------------------------------------
 
 Agglomerative clustering + ami score -- not normalised 
 i) Resnet 50 rgb, not normalised, 9 classes 
@@ -168,7 +169,7 @@ i) Resnet 50 rgb, not normalised, 9 classes
 ii) resnet50, grayscale, not normalised, 9 classes 
     python3 agglomerative_clustering.py --embedding_file ../embeddings_files/resnet_embeddings_train_gray.npz --n_clusters 9 --output_file ../ac_cluster_files/agglomerative_clusters_resnet_gray.npz
     python3 ami.py --clustered_file ../ac_cluster_files/agglomerative_clusters_resnet_gray.npz
-    --> 
+    --> 0.2243
     python3 compute_cluster_metrics.py --clustered_file ../ac_cluster_files/agglomerative_clusters_resnet_gray.npz --csv_file ../metrics_results/agglomerative_clusters_resnet_gray.csv
 iii) DINOv2 rgb, nor normalised, 9 classes 
     python3 agglomerative_clustering.py --embedding_file ../embeddings_files/dino_embeddings_train.npz --n_clusters 9 --output_file ../ac_cluster_files/agglomerative_clusters_dino_rgb.npz
@@ -178,7 +179,7 @@ iii) DINOv2 rgb, nor normalised, 9 classes
 iv) DINOv2 grayscale, not normalised, 9 classes
     python3 agglomerative_clustering.py --embedding_file ../embeddings_files/dino_embeddings_train_gray.npz --n_clusters 9 --output_file ../ac_cluster_files/agglomerative_clusters_dino_gray.npz
     python3 ami.py --clustered_file ../ac_cluster_files/agglomerative_clusters_dino_gray.npz
-    --> 
+    --> 0.2916
     python3 compute_cluster_metrics.py --clustered_file ../ac_cluster_files/agglomerative_clusters_dino_gray.npz --csv_file ../metrics_results/agglomerative_clusters_dino_gray.csv
 
 Agglomerative clustering + ami score, normalised 
@@ -190,7 +191,7 @@ i) resnet 50, rgb, normalised, 9 classes
 ii) resnet50, gray, normalised, 9 classes 
     python3 agglomerative_clustering.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../ac_cluster_files/ac_resnet_gray_normalised.npz
     python3 ami.py --clustered_file ../ac_cluster_files/ac_resnet_gray_normalised.npz
-    -->
+    -->0.2480
     python3 compute_cluster_metrics.py --clustered_file ../ac_cluster_files/ac_resnet_gray_normalised.npz --csv_file ../metrics_results/ac_resnet_gray_normalised.csv
 iii) DINOv2, rgb, normalised, 9 classes 
     python3 agglomerative_clustering.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train.npz --n_clusters 9 --output_file ../ac_cluster_files/ac_dino_rgb_normalised.npz
@@ -200,57 +201,133 @@ iii) DINOv2, rgb, normalised, 9 classes
 iv) DINOv2, gray, normalised, 9 classes 
     python3 agglomerative_clustering.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../ac_cluster_files/ac_dino_gray_normalised.npz
     python3 ami.py --clustered_file ../ac_cluster_files/ac_dino_gray_normalised.npz
-    --> 
+    --> 0.2556
     python3 compute_cluster_metrics.py --clustered_file ../ac_cluster_files/ac_dino_gray_normalised.npz --csv_file ../metrics_results/ac_dino_gray_normalised.csv
 
-
+----------------------------------------------------------------------------------------------------
 
 HDBSCAN + ami score not normalised 
-
-i) resnet 50, rgb, normalised, 9 classes 
+resnet gray and rgb compute cluster metric and ami score are differnt 
+i) resnet 50, rgb, not normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../embeddings_files/resnet_embeddings_train.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_resnet_rgb.npz 
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_rgb.npz
-    --> 0.0075
+    --> 0.0013
+
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     162
+   Invalid ground truths:  0
+   Used in AMI:            30715
+
+✅ Adjusted Mutual Information (AMI): 0.0013
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_rgb.npz --csv_file ../metrics_results/hdbscan_resnet_rgb.csv
 ii) resnet50, grayscale, not normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../embeddings_files/resnet_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_resnet_gray.npz 
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_gray.npz
-    --> 
+    --> 0.0005
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     108
+   Invalid ground truths:  0
+   Used in AMI:            30769
+
+✅ Adjusted Mutual Information (AMI): 0.0005
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_gray.npz --csv_file ../metrics_results/hdbscan_resnet_gray.csv
 iii) DINOv2 rgb, nor normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../embeddings_files/dino_embeddings_train.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_dino_rgb.npz 
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_dino_rgb.npz
-    --> 0.1985
+    --> 0.3080    
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_dino_rgb.npz --csv_file ../metrics_results/hdbscan_dino_rgb.csv
+
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     20606
+   Invalid ground truths:  0
+   Used in AMI:            10271
+
+✅ Adjusted Mutual Information (AMI): 0.3080
+
+
+
 iv) DINOv2, grayscale, not normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../embeddings_files/dino_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_dino_gray.npz 
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_dino_gray.npz
-    --> 
+    --> 0.1881
+
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     21402
+   Invalid ground truths:  0
+   Used in AMI:            9475
+
+✅ Adjusted Mutual Information (AMI): 0.3038
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_dino_gray.npz --csv_file ../metrics_results/hdbscan_dino_gray.csv
+
+
+
+
+
 
 HDBSCAN + ami score, normalised 
 i) resnet 50, rgb, normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_resnet_rgb_normalised.npz
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_rgb_normalised.npz
-    --> 
+    --> 0.0064
+
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     120
+   Invalid ground truths:  0
+   Used in AMI:            30757
+
+✅ Adjusted Mutual Information (AMI): 0.0013
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_rgb_normalised.npz --csv_file ../metrics_results/hdbscan_resnet_rgb_normalised.csv
 ii) resnet50, gray, normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_resnet_gray_normalised.npz 
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_gray_normalised.npz
-    -->
+    -->0.0646
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     13499
+   Invalid ground truths:  0
+   Used in AMI:            17378
+
+✅ Adjusted Mutual Information (AMI): 0.1129
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_resnet_gray_normalised.npz --csv_file ../metrics_results/hdbscan_resnet_gray_normalised.csv
 iii) DINOv2, rgb, normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_dino_rgb_normalised.npz
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_dino_rgb_normalised.npz
     --> 0.1973
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     20384
+   Invalid ground truths:  0
+   Used in AMI:            10493
+
+✅ Adjusted Mutual Information (AMI): 0.3045
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_dino_rgb_normalised.npz --csv_file ../metrics_results/hdbscan_dino_rgb_normalised.csv
 iv) DINOv2, gray, normalised, 9 classes 
     python3 hdbscan_clustering.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../hdbscan_clusters/hdbscan_dino_gray_normalised.npz
     python3 ami.py --clustered_file ../hdbscan_clusters/hdbscan_dino_gray_normalised.npz
-    --> 
+    --> 0.1880
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     21294
+   Invalid ground truths:  0
+   Used in AMI:            9583
+
+✅ Adjusted Mutual Information (AMI): 0.3026
     python3 compute_cluster_metrics.py --clustered_file ../hdbscan_clusters/hdbscan_dino_gray_normalised.npz --csv_file ../metrics_results/hdbscan_dino_gray_normalised.csv
 
-
+----------------------------------------------------------------------------------------------------
 
 UMAP+kmeans 
 i) resnet, rgb, not normalised9 classes 
@@ -261,7 +338,7 @@ i) resnet, rgb, not normalised9 classes
 ii) resnet grayscale, not normalised 9 classes 
     python3 umap_k_means.py --embedding_file ../embeddings_files/resnet_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_k_means_clusters/umap_km_resnet_gray.npz
     python3 ami.py --clustered_file ../umap_k_means_clusters/umap_km_resnet_gray.npz
-    --> 
+    --> 0.2931
     python3 compute_cluster_metrics.py --clustered_file ../umap_k_means_clusters/umap_km_resnet_gray.npz --csv_file ../metrics_results/umap_km_resnet_gray.csv
 iii) dino, rgb, not normalised 9 classes 
     python3 umap_k_means.py --embedding_file ../embeddings_files/dino_embeddings_train.npz --n_clusters 9 --output_file ../umap_k_means_clusters/umap_km_dino_rgb.npz
@@ -271,35 +348,35 @@ iii) dino, rgb, not normalised 9 classes
 iv) dino, gray, not normalised 9 classes 
     python3 umap_k_means.py --embedding_file ../embeddings_files/dino_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_k_means_clusters/umap_km_dino_gray.npz
     python3 ami.py --clustered_file ../umap_k_means_clusters/umap_km_dino_gray.npz
-    --> 
+    --> 0.3654
     python3 compute_cluster_metrics.py --clustered_file ../umap_k_means_clusters/umap_km_dino_gray.npz --csv_file ../metrics_results/umap_km_dino_gray.csv
 
-
+umap+kmeans normalised
 
 i) resnet, rgb, normalised 9 classes 
     python3 umap_k_means.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train.npz --n_clusters 9 --output_file ../umap_k_means_clusters/umap_km_resnet_normalised_rgb.npz
     python3 ami.py --clustered_file ../umap_k_means_clusters/umap_km_resnet_normalised_rgb.npz
-    --> 0.2918 and with the axis=0 : 0.2892
-    python3 compute_cluster_metrics.py --clustered_file ../umap_k_means_clusters/umap_km_dino_rgb.npz --csv_file ../metrics_results/umap_km_dino_rgb.csv
+    --> : 0.2892
+    python3 compute_cluster_metrics.py --clustered_file ../umap_k_means_clusters/umap_km_resnet_normalised_rgb.npz --csv_file ../metrics_results/umap_km_resnet_normalised_rgb.csv
 ii) resnet grayscale, normalised 9 classes 
     python3 umap_k_means.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_k_means_clusters/umap_km_resnet_normalised_gray.npz
     python3 ami.py --clustered_file ../umap_k_means_clusters/umap_km_resnet_normalised_gray.npz
-    --> 
+    --> 0.3088
     python3 compute_cluster_metrics.py --clustered_file ../umap_k_means_clusters/umap_km_resnet_normalised_gray.npz --csv_file ../metrics_results/umap_km_resnet_normalised_gray.csv
 
 iii) dino, rgb, normalised 9 classes 
     python3 umap_k_means.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train.npz --n_clusters 9 --output_file ../umap_k_means_clusters/umap_km_dino_normalised_rgb.npz
     python3 ami.py --clustered_file ../umap_k_means_clusters/umap_km_dino_normalised_rgb.npz
-    -->0.3847 and with axis=0  : 0.4107
+    --> : 0.4107
     python3 compute_cluster_metrics.py --clustered_file ../umap_k_means_clusters/umap_km_dino_normalised_rgb.npz --csv_file ../metrics_results/umap_km_dino_normalised_rgb.csv
 
 iv) dino, gray, normalised 9 classes 
     python3 umap_k_means.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_k_means_clusters/umap_km_dino_normalised_gray.npz
     python3 ami.py --clustered_file ../umap_k_means_clusters/umap_km_dino_normalised_gray.npz
-    --> 
+    --> 0.3739
     python3 compute_cluster_metrics.py --clustered_file ../umap_k_means_clusters/umap_km_dino_normalised_gray.npz --csv_file ../metrics_results/umap_km_dino_normalised_gray.csv
 
-
+----------------------------------------------------------------------------------------------------
 
 ## testing umap+ac 
 currently: 9 clusters, 30 neighbors, 50 components 
@@ -313,7 +390,7 @@ i) resnet, rgb, not normalised 9 classes
 ii) resnet grayscale, not normalised 9 classes 
     python3 umap_ac.py --embedding_file ../embeddings_files/resnet_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_ac_clusters/umap_ac_resnet_gray.npz
     python3 ami.py --clustered_file ../umap_ac_clusters/umap_ac_resnet_gray.npz
-    --> 
+    --> 0.3055
     python3 compute_cluster_metrics.py --clustered_file ../umap_ac_clusters/umap_ac_resnet_gray.npz --csv_file ../metrics_results/umap_ac_resnet_gray.csv
 iii) dino, rgb, not normalised 9 classes 
     python3 umap_ac.py --embedding_file ../embeddings_files/dino_embeddings_train.npz --n_clusters 9 --output_file ../umap_ac_clusters/umap_ac_dino_rgb.npz
@@ -323,7 +400,7 @@ iii) dino, rgb, not normalised 9 classes
 iv) dino, gray, not normalised 9 classes 
     python3 umap_ac.py --embedding_file ../embeddings_files/dino_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_ac_clusters/umap_ac_dino_gray.npz
     python3 ami.py --clustered_file ../umap_ac_clusters/umap_ac_dino_gray.npz
-    -->
+    -->0.3441
     python3 compute_cluster_metrics.py --clustered_file ../umap_ac_clusters/umap_ac_dino_gray.npz --csv_file ../metrics_results/umap_ac_dino_gray.csv
 
 
@@ -335,7 +412,7 @@ i) resnet, rgb, normalised9 classes
 ii) resnet grayscale, normalised 9 classes 
     python3 umap_ac.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_ac_clusters/umap_ac_resnet_normalised_gray.npz
     python3 ami.py --clustered_file ../umap_ac_clusters/umap_ac_resnet_normalised_gray.npz
-    --> 
+    --> 0.3116
     python3 compute_cluster_metrics.py --clustered_file ../umap_ac_clusters/umap_ac_resnet_normalised_gray.npz --csv_file ../metrics_results/umap_ac_resnet_normalised_gray.csv 
 iii) dino, rgb, normalised 9 classes 
     python3 umap_ac.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train.npz --n_clusters 9 --output_file ../umap_ac_clusters/umap_ac_dino_normalised_rgb.npz
@@ -345,61 +422,129 @@ iii) dino, rgb, normalised 9 classes
 iv) dino, gray, normalised 9 classes 
     python3 umap_ac.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz --n_clusters 9 --output_file ../umap_ac_clusters/umap_ac_dino_normalised_gray.npz
     python3 ami.py --clustered_file ../umap_ac_clusters/umap_ac_dino_normalised_gray.npz
-    --> 
+    --> 0.3424
     python3 compute_cluster_metrics.py --clustered_file ../umap_ac_clusters/umap_ac_dino_normalised_gray.npz --csv_file ../metrics_results/umap_ac_dino_normalised_gray.csv
 
-
+----------------------------------------------------------------------------------------------------
 
 testing UMAP + HDBSCAN 
 i) resnet, rgb, not normalised 9 classes
     python3 umap_hdbscan.py --embedding_file ../embeddings_files/resnet_embeddings_train.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_rgb.npz 
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_rgb.npz
-    --> 
+    --> 0.2228
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     8473
+   Invalid ground truths:  0
+   Used in AMI:            22404
+
+✅ Adjusted Mutual Information (AMI): 0.2572
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_rgb.npz --csv_file ../metrics_results/umap_hdbscan_resnet_rgb.csv
 ii) resnet grayscale, not normalised 9 classes 
     python3 umap_hdbscan.py --embedding_file ../embeddings_files/resnet_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_gray.npz
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_gray.npz
-    -->
+    -->0.2087
+
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     10587
+   Invalid ground truths:  0
+   Used in AMI:            20290
+
+✅ Adjusted Mutual Information (AMI): 0.2525
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_gray.npz --csv_file ../metrics_results/umap_hdbscan_resnet_gray.csv
 
 iii) dino, rgb, not normalised 9 classes 
     python3 umap_hdbscan.py --embedding_file ../embeddings_files/dino_embeddings_train.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_dino_rgb.npz
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_rgb.npz
-    --> 
+    --> 0.2356
+
+
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     8173
+   Invalid ground truths:  0
+   Used in AMI:            22704
+
+✅ Adjusted Mutual Information (AMI): 0.2720
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_rgb.npz --csv_file ../metrics_results/umap_hdbscan_dino_rgb.csv
 
 iv) dino, gray, not normalised 9 classes 
     python3 umap_hdbscan.py --embedding_file ../embeddings_files/dino_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_dino_gray.npz
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_gray.npz
-    --> 
+    --> 0.2296
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     8540
+   Invalid ground truths:  0
+   Used in AMI:            22337
+
+✅ Adjusted Mutual Information (AMI): 0.2667
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_gray.npz --csv_file ../metrics_results/umap_hdbscan_dino_gray.csv
 
 UMAP+HDBSCAN normalised
 i) resnet, rgb, normalised9 classes 
     python3 umap_hdbscan.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_normalised_rgb.npz
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_normalised_rgb.npz
-    --> 
+    --> 0.2260
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     8766
+   Invalid ground truths:  0
+   Used in AMI:            22111
+
+✅ Adjusted Mutual Information (AMI): 0.2642
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_normalised_rgb.npz --csv_file ../metrics_results/umap_hdbscan_resnet_normalised_rgb.csv
 ii) resnet grayscale, normalised 9 classes 
     python3 umap_hdbscan.py --embedding_file ../normalised_embeddings/resnet_normalised_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_normalised_gray.npz
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_normalised_gray.npz
-    --> 
+    --> 0.2136
+
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     11334
+   Invalid ground truths:  0
+   Used in AMI:            19543
+
+✅ Adjusted Mutual Information (AMI): 0.2612
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_resnet_normalised_gray.npz --csv_file ../metrics_results/umap_hdbscan_resnet_normalised_gray.csv
 
 iii) dino, rgb, normalised 9 classes 
     python3 umap_hdbscan.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_dino_normalised_rgb.npz
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_normalised_rgb.npz
-    --> 
+    --> 0.2321
 
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     8374
+   Invalid ground truths:  0
+   Used in AMI:            22503
+
+✅ Adjusted Mutual Information (AMI): 0.2692
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_normalised_rgb.npz --csv_file ../metrics_results/umap_hdbscan_dino_normalised_rgb.csv
 
 iv) dino, gray, normalised 9 classes 
     python3 umap_hdbscan.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz --min_cluster_size 10 --output_file ../umap_hdbscan_clusters/umap_hdbscan_dino_normalised_gray.npz
     python3 ami.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_normalised_gray.npz
-    -->
+    -->0.2282
+
+📊 AMI Calculation Summary:
+   Total samples:          30877
+   Cluster noise (-1):     8226
+   Invalid ground truths:  0
+   Used in AMI:            22651
+
+✅ Adjusted Mutual Information (AMI): 0.2642
     python3 compute_cluster_metrics.py --clustered_file ../umap_hdbscan_clusters/umap_hdbscan_dino_normalised_gray.npz --csv_file ../metrics_results/umap_hdbscan_dino_normalised_gray.csv
 
-
+----------------------------------------------------------------------------------------------------
 
 
 !!! 30-09 / 01-10
@@ -441,3 +586,10 @@ python3 cluster_vis.py --input_file ../umap_hdbscan_clusters/umap_hdbscan_dino_n
 python3 umap_reducer.py --embedding_file ../normalised_embeddings/dino_normalised_embeddings_train.npz --output_file ../umap_dino_normalised_rgb.npz
 
 python3 vis_umap.py --input_file ../umap_dino_normalised_rgb.npz --output_prefix umap_dino_normalised_rgb
+
+
+
+
+--------------------------------------------------------------------------------------
+
+python3 resnet_train_cv.py --data-root ../dataset/r_splits --output-dir ../resnet_cv 

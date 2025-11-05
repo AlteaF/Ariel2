@@ -1,0 +1,7 @@
+algorithm,Normalised,Pearson(AMI*Silhouette),Pearson_p_value,Pearson_significance
+agglomerative,Normalised,0.7022292734911444,0.05214320777582073,Not significant
+agglomerative,Not normalised,0.5727941347435799,0.13780133656827132,Not significant
+hdbscan,Normalised,0.3432102394523222,0.405229822391306,Not significant
+hdbscan,Not normalised,0.44669704918880543,0.2671899168611974,Not significant
+k_means,Normalised,0.8356138205057912,0.009781272664462277,Significant
+k_means,Not normalised,0.7234796645779056,0.04250305048807741,Significant

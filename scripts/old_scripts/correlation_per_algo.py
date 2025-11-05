@@ -6,7 +6,7 @@ import seaborn as sns
 from matplotlib.patches import Patch
 
 # --- Load and process experiments ---
-folder = "../metrics_results_km"
+folder = "../metrics_results"
 files = glob.glob(f"{folder}/*.csv")
 
 # Helper: detect clustering algorithm from experiment name

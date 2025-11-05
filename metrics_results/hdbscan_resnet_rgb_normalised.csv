@@ -1,0 +1,4 @@
+type,cluster_id,silhouette_score,ami_score,purity,n_samples
+global,all,0.41449204,0.001266917586051172,,
+cluster,0,0.41449767,,0.6026416813065262,30738
+cluster,1,0.40537268,,0.9473684210526315,19

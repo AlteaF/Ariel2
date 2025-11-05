@@ -1,0 +1,13 @@
+algorithm,Normalised,UMAP,r,p_value,significance
+agglomerative,Normalised,No UMAP,0.8124620238550294,0.18753797614497048,Not significant
+agglomerative,Normalised,UMAP,0.10481165731882591,0.8951883426811742,Not significant
+agglomerative,Not normalised,No UMAP,-0.6198582680219976,0.3801417319780023,Not significant
+agglomerative,Not normalised,UMAP,-0.06897243497457684,0.9310275650254232,Not significant
+hdbscan,Normalised,No UMAP,-0.25560482308197185,0.7443951769180281,Not significant
+hdbscan,Normalised,UMAP,0.9939578206252182,0.0060421793747817976,Significant
+hdbscan,Not normalised,No UMAP,0.010381290699055055,0.989618709300945,Not significant
+hdbscan,Not normalised,UMAP,-0.003207471547122299,0.9967925284528778,Not significant
+k_means,Normalised,No UMAP,0.7325062246497126,0.2674937753502875,Not significant
+k_means,Normalised,UMAP,-0.41475759472762974,0.5852424052723704,Not significant
+k_means,Not normalised,No UMAP,0.5014225815013303,0.49857741849866954,Not significant
+k_means,Not normalised,UMAP,0.2888680495794416,0.7111319504205584,Not significant

@@ -23,33 +23,15 @@ def extract_ground_truth_labels(image_paths):
 
 
 def compute_ami(cluster_labels, true_labels):
-    """
-    Compute Adjusted Mutual Information (AMI) excluding any entries
-    where the cluster label or ground-truth label is -1.
-    Returns AMI score and counts of excluded samples.
-    """
-    total_points = len(cluster_labels)
-    noise_points = np.sum(np.array(cluster_labels) == -1)
-    invalid_gt = np.sum(np.array(true_labels) == -1)
-
-    paired = [
-        (c, t) for c, t in zip(cluster_labels, true_labels)
-        if c != -1 and t != -1
-    ]
-
+    paired = [(c, t) for c, t in zip(cluster_labels, true_labels) if t != -1]
     if not paired:
-        raise ValueError("No valid labels found for AMI (all were -1).")
-
+        raise ValueError("No valid labels found for AMI.")
     c_labels, t_labels = zip(*paired)
-    ami = adjusted_mutual_info_score(t_labels, c_labels)
-
-    return ami, total_points, noise_points, invalid_gt
-
+    return adjusted_mutual_info_score(t_labels, c_labels)
 
 def main():
     parser = argparse.ArgumentParser(description="Compute AMI score from cluster and YOLO labels.")
-    parser.add_argument('--clustered_file', type=str, required=True,
-                        help='Path to .npz with image paths + cluster labels')
+    parser.add_argument('--clustered_file', type=str, required=True, help='Path to .npz with image paths + cluster labels')
     args = parser.parse_args()
 
     data = np.load(args.clustered_file, allow_pickle=True)
@@ -57,15 +39,9 @@ def main():
     cluster_labels = data['cluster_labels']
 
     true_labels = extract_ground_truth_labels(image_paths)
-    ami_score, total_points, noise_points, invalid_gt = compute_ami(cluster_labels, true_labels)
+    ami_score = compute_ami(cluster_labels, true_labels)
 
-    print("\n📊 AMI Calculation Summary:")
-    print(f"   Total samples:          {total_points}")
-    print(f"   Cluster noise (-1):     {noise_points}")
-    print(f"   Invalid ground truths:  {invalid_gt}")
-    print(f"   Used in AMI:            {total_points - noise_points - invalid_gt}")
     print(f"\n✅ Adjusted Mutual Information (AMI): {ami_score:.4f}")
-
 
 if __name__ == "__main__":
     main()

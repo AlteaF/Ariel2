@@ -1,0 +1,173 @@
+Cross-validation summary (4-fold)
+Date: 2025-10-22T18:24:44.285634
+
+Fold 1: acc=0.7347, macroF1=0.4757
+
+Fold 2: acc=0.7598, macroF1=0.3670
+
+Fold 3: acc=0.7642, macroF1=0.6434
+
+Fold 4: acc=0.7400, macroF1=0.3256
+
+
+python3 resnet_train_cv.py --data-root ../dataset/r_splits --output-dir ../resnet_cv 
+[INFO] Starting training at 2025-10-22T12:05:09.378204
+[INFO] Using device: cpu
+[INFO] Preparing data transforms...
+[INFO] Scanning data splits...
+[✓] Found 4 splits:
+    r_split_0
+    r_split_1
+    r_split_2
+    r_split_3
+[INFO] Building global class index...
+[✓] Global classes (9): ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+[INFO] Remapping datasets...
+[✓] Dataset remapping complete
+[INFO] Beginning cross-validation...
+
+========== Fold 1/4 ==========
+[INFO] Using ../dataset/r_splits/r_split_0 as validation set
+[INFO] Creating dataloaders...
+[✓] Train size: 17716, Val size: 20856
+[INFO] Initializing ResNet50 model...
+[✓] Model ready
+[INFO] Starting training loop...
+→ Fold 1, Epoch 1/10
+   [EPOCH 1] Train loss=0.5011, acc=0.8312 | Val loss=1.0339, acc=0.7127, macroF1=0.3760
+   ✔ New best model saved (0.3760) at ../resnet_cv/best_fold1.pth
+→ Fold 1, Epoch 2/10
+   [EPOCH 2] Train loss=0.3300, acc=0.8878 | Val loss=0.9628, acc=0.7285, macroF1=0.4589
+   ✔ New best model saved (0.4589) at ../resnet_cv/best_fold1.pth
+→ Fold 1, Epoch 3/10
+   [EPOCH 3] Train loss=0.3080, acc=0.8935 | Val loss=1.1092, acc=0.7235, macroF1=0.4254
+→ Fold 1, Epoch 4/10
+   [EPOCH 4] Train loss=0.2769, acc=0.9061 | Val loss=1.2026, acc=0.6959, macroF1=0.4636
+   ✔ New best model saved (0.4636) at ../resnet_cv/best_fold1.pth
+→ Fold 1, Epoch 5/10
+   [EPOCH 5] Train loss=0.2772, acc=0.9042 | Val loss=1.1461, acc=0.7151, macroF1=0.4547
+→ Fold 1, Epoch 6/10
+   [EPOCH 6] Train loss=0.2297, acc=0.9193 | Val loss=1.0833, acc=0.7228, macroF1=0.4729
+   ✔ New best model saved (0.4729) at ../resnet_cv/best_fold1.pth
+→ Fold 1, Epoch 7/10
+   [EPOCH 7] Train loss=0.2283, acc=0.9233 | Val loss=1.0149, acc=0.7347, macroF1=0.4757
+   ✔ New best model saved (0.4757) at ../resnet_cv/best_fold1.pth
+→ Fold 1, Epoch 8/10
+   [EPOCH 8] Train loss=0.2240, acc=0.9232 | Val loss=1.0568, acc=0.7299, macroF1=0.4637
+→ Fold 1, Epoch 9/10
+   [EPOCH 9] Train loss=0.2230, acc=0.9233 | Val loss=1.0704, acc=0.7224, macroF1=0.4627
+→ Fold 1, Epoch 10/10
+   [EPOCH 10] Train loss=0.2279, acc=0.9202 | Val loss=1.0138, acc=0.7353, macroF1=0.4699
+[INFO] Training complete for this fold. Loading best model for evaluation...
+[✓] Fold 1 complete. Macro-F1: 0.4757
+
+========== Fold 2/4 ==========
+[INFO] Using ../dataset/r_splits/r_split_1 as validation set
+[INFO] Creating dataloaders...
+[✓] Train size: 37910, Val size: 662
+[INFO] Initializing ResNet50 model...
+[✓] Model ready
+[INFO] Starting training loop...
+→ Fold 2, Epoch 1/10
+   [EPOCH 1] Train loss=0.6018, acc=0.7962 | Val loss=0.9130, acc=0.7221, macroF1=0.2716
+   ✔ New best model saved (0.2716) at ../resnet_cv/best_fold2.pth
+→ Fold 2, Epoch 2/10
+   [EPOCH 2] Train loss=0.4795, acc=0.8342 | Val loss=0.7994, acc=0.7417, macroF1=0.3046
+   ✔ New best model saved (0.3046) at ../resnet_cv/best_fold2.pth
+→ Fold 2, Epoch 3/10
+   [EPOCH 3] Train loss=0.4557, acc=0.8419 | Val loss=0.8734, acc=0.7598, macroF1=0.2909
+→ Fold 2, Epoch 4/10
+   [EPOCH 4] Train loss=0.4401, acc=0.8488 | Val loss=0.7464, acc=0.7553, macroF1=0.3088
+   ✔ New best model saved (0.3088) at ../resnet_cv/best_fold2.pth
+→ Fold 2, Epoch 5/10
+   [EPOCH 5] Train loss=0.4225, acc=0.8550 | Val loss=1.0491, acc=0.7251, macroF1=0.2802
+→ Fold 2, Epoch 6/10
+   [EPOCH 6] Train loss=0.3704, acc=0.8725 | Val loss=0.9081, acc=0.7372, macroF1=0.2935
+→ Fold 2, Epoch 7/10
+   [EPOCH 7] Train loss=0.3667, acc=0.8762 | Val loss=0.7923, acc=0.7492, macroF1=0.3481
+   ✔ New best model saved (0.3481) at ../resnet_cv/best_fold2.pth
+→ Fold 2, Epoch 8/10
+   [EPOCH 8] Train loss=0.3608, acc=0.8757 | Val loss=0.8692, acc=0.7417, macroF1=0.2917
+→ Fold 2, Epoch 9/10
+   [EPOCH 9] Train loss=0.3615, acc=0.8775 | Val loss=0.9440, acc=0.7356, macroF1=0.3168
+→ Fold 2, Epoch 10/10
+   [EPOCH 10] Train loss=0.3585, acc=0.8777 | Val loss=0.7998, acc=0.7598, macroF1=0.3670
+   ✔ New best model saved (0.3670) at ../resnet_cv/best_fold2.pth
+[INFO] Training complete for this fold. Loading best model for evaluation...
+[✓] Fold 2 complete. Macro-F1: 0.3670
+
+========== Fold 3/4 ==========
+[INFO] Using ../dataset/r_splits/r_split_2 as validation set
+[INFO] Creating dataloaders...
+[✓] Train size: 37673, Val size: 899
+[INFO] Initializing ResNet50 model...
+[✓] Model ready
+[INFO] Starting training loop...
+→ Fold 3, Epoch 1/10
+   [EPOCH 1] Train loss=0.6023, acc=0.7968 | Val loss=0.9740, acc=0.6852, macroF1=0.5255
+   ✔ New best model saved (0.5255) at ../resnet_cv/best_fold3.pth
+→ Fold 3, Epoch 2/10
+   [EPOCH 2] Train loss=0.4836, acc=0.8352 | Val loss=1.0285, acc=0.6930, macroF1=0.5523
+   ✔ New best model saved (0.5523) at ../resnet_cv/best_fold3.pth
+→ Fold 3, Epoch 3/10
+   [EPOCH 3] Train loss=0.4530, acc=0.8433 | Val loss=0.7760, acc=0.7486, macroF1=0.5469
+→ Fold 3, Epoch 4/10
+   [EPOCH 4] Train loss=0.4357, acc=0.8497 | Val loss=1.1504, acc=0.6418, macroF1=0.4778
+→ Fold 3, Epoch 5/10
+   [EPOCH 5] Train loss=0.4182, acc=0.8560 | Val loss=0.7686, acc=0.7453, macroF1=0.5730
+   ✔ New best model saved (0.5730) at ../resnet_cv/best_fold3.pth
+→ Fold 3, Epoch 6/10
+   [EPOCH 6] Train loss=0.3662, acc=0.8760 | Val loss=0.7663, acc=0.7642, macroF1=0.6434
+   ✔ New best model saved (0.6434) at ../resnet_cv/best_fold3.pth
+→ Fold 3, Epoch 7/10
+   [EPOCH 7] Train loss=0.3600, acc=0.8766 | Val loss=0.7696, acc=0.7575, macroF1=0.5605
+→ Fold 3, Epoch 8/10
+   [EPOCH 8] Train loss=0.3596, acc=0.8781 | Val loss=0.7732, acc=0.7642, macroF1=0.5705
+→ Fold 3, Epoch 9/10
+   [EPOCH 9] Train loss=0.3556, acc=0.8791 | Val loss=0.8267, acc=0.7341, macroF1=0.5424
+→ Fold 3, Epoch 10/10
+   [EPOCH 10] Train loss=0.3498, acc=0.8789 | Val loss=0.7660, acc=0.7653, macroF1=0.5883
+[INFO] Training complete for this fold. Loading best model for evaluation...
+[✓] Fold 3 complete. Macro-F1: 0.6434
+
+========== Fold 4/4 ==========
+[INFO] Using ../dataset/r_splits/r_split_3 as validation set
+[INFO] Creating dataloaders...
+[✓] Train size: 22417, Val size: 16155
+[INFO] Initializing ResNet50 model...
+[✓] Model ready
+[INFO] Starting training loop...
+→ Fold 4, Epoch 1/10
+   [EPOCH 1] Train loss=0.6840, acc=0.7681 | Val loss=0.8843, acc=0.7162, macroF1=0.2569
+   ✔ New best model saved (0.2569) at ../resnet_cv/best_fold4.pth
+→ Fold 4, Epoch 2/10
+   [EPOCH 2] Train loss=0.5414, acc=0.8149 | Val loss=0.7666, acc=0.7400, macroF1=0.3256
+   ✔ New best model saved (0.3256) at ../resnet_cv/best_fold4.pth
+→ Fold 4, Epoch 3/10
+   [EPOCH 3] Train loss=0.4916, acc=0.8308 | Val loss=1.0129, acc=0.6777, macroF1=0.2661
+→ Fold 4, Epoch 4/10
+   [EPOCH 4] Train loss=0.4819, acc=0.8335 | Val loss=1.0730, acc=0.6539, macroF1=0.2621
+→ Fold 4, Epoch 5/10
+   [EPOCH 5] Train loss=0.4581, acc=0.8407 | Val loss=1.2905, acc=0.6006, macroF1=0.2560
+→ Fold 4, Epoch 6/10
+   [EPOCH 6] Train loss=0.4026, acc=0.8616 | Val loss=0.8298, acc=0.7445, macroF1=0.2881
+→ Fold 4, Epoch 7/10
+   [EPOCH 7] Train loss=0.3974, acc=0.8616 | Val loss=0.9050, acc=0.7162, macroF1=0.2843
+→ Fold 4, Epoch 8/10
+   [EPOCH 8] Train loss=0.4022, acc=0.8591 | Val loss=0.8461, acc=0.7343, macroF1=0.2862
+→ Fold 4, Epoch 9/10
+   [EPOCH 9] Train loss=0.4031, acc=0.8610 | Val loss=0.8707, acc=0.7257, macroF1=0.2899
+→ Fold 4, Epoch 10/10
+   [EPOCH 10] Train loss=0.3973, acc=0.8603 | Val loss=0.8528, acc=0.7345, macroF1=0.2861
+[INFO] Training complete for this fold. Loading best model for evaluation...
+[✓] Fold 4 complete. Macro-F1: 0.3256
+
+[INFO] All folds complete. Aggregating metrics...
+========== CROSS-VALIDATION SUMMARY ==========
+Folds: 4
+Average accuracy: 0.7497
+Average macro F1: 0.4529
+Average macro precision: 0.4838
+Average macro recall: 0.4703
+[✓] Summary saved to ../resnet_cv/cv_summary_4fold.txt
+[DONE] Training finished successfully at 2025-10-22T18:24:44.285703

@@ -1,0 +1,4 @@
+algorithm,Pearson(AMI*Silhouette),Pearson_p_value,Pearson_significance
+agglomerative,0.6353253941912069,0.008177937761644062,Significant
+hdbscan,0.394630237530353,0.13036768821730263,Not significant
+k_means,0.7851239755246235,0.00031443989843700726,Significant
