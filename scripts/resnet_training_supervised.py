@@ -1,10 +1,11 @@
+
 import torch
 import torchvision
 from torchvision import transforms
 import torch.nn as nn
 import torch.optim as optim
 from torchvision.models import resnet50, ResNet50_Weights
-import os 
+import os
 
 def main():
     # Define the transformation
@@ -17,10 +18,9 @@ def main():
             std=[0.229, 0.224, 0.225]
         )
     ])
-
     # Load the data
-    train_data = torchvision.datasets.ImageFolder(root="../resnet_images/train/", transform=transform)
-    test_data = torchvision.datasets.ImageFolder(root="../resnet_images/test/", transform=transform)
+    train_data = torchvision.datasets.ImageFolder(root="/Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_resnet_baseline/cropped_train", transform=transform)
+    test_data = torchvision.datasets.ImageFolder(root="/Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_resnet_baseline/cropped_test", transform=transform)
 
     # Define the dataloaders
     train_loader = torch.utils.data.DataLoader(train_data, batch_size=32, shuffle=True, num_workers=4)
@@ -30,13 +30,27 @@ def main():
     weights = ResNet50_Weights.DEFAULT
     model = resnet50(weights=weights)
 
-    # Replace the last layer
+    # Freeze the first 3 stages (conv1, conv2_x, conv3_x)
+    for name, param in model.named_parameters():
+        # Freeze conv1, conv2_x, and conv3_x
+        if name.startswith('layer1') or name.startswith('layer2') or name.startswith('conv1') or name.startswith('bn1'):
+            param.requires_grad = False
+        else:
+            param.requires_grad = True
+
+    for name, layer in model.named_children():
+        if name in ['conv1', 'bn1', 'layer1', 'layer2']:
+            for param in layer.parameters():
+                param.requires_grad = False
+
+    # Replace the last layer for 9 classes
     num_features = model.fc.in_features
-    model.fc = nn.Linear(num_features, len(train_data.classes))
+    model.fc = nn.Linear(num_features, 9)  # 9 classes
 
     # Define the loss function and optimizer
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
+    # Only optimize the parameters that require gradients
+    optimizer = optim.SGD(filter(lambda p: p.requires_grad, model.parameters()), lr=0.001, momentum=0.9)
 
     # Move the model to the device
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
@@ -54,16 +68,13 @@ def main():
             # Move the data to the device
             inputs = inputs.to(device)
             labels = labels.to(device)
-
             # Zero the parameter gradients
             optimizer.zero_grad()
-
             # Forward + backward + optimize
             outputs = model(inputs)
             loss = criterion(outputs, labels)
             loss.backward()
             optimizer.step()
-
             # Update the training loss
             train_loss += loss.item() * inputs.size(0)
 
@@ -76,21 +87,20 @@ def main():
                 # Move the data to the device
                 inputs = inputs.to(device)
                 labels = labels.to(device)
-
                 # Forward
                 outputs = model(inputs)
                 loss = criterion(outputs, labels)
-
                 # Update the test loss and accuracy
                 test_loss += loss.item() * inputs.size(0)
                 _, preds = torch.max(outputs, 1)
                 test_acc += torch.sum(preds == labels.data)
 
-        
+        # Save the model
         os.makedirs("saved_models", exist_ok=True)
-        model_path = "saved_models/resnet50_baseline.pth"
+        model_path = f"saved_models/resnet50_finetuned_epoch_{epoch + 1}.pth"
         torch.save(model.state_dict(), model_path)
         print(f"✅ Model saved to {model_path}")
+
         # Print the training and test loss and accuracy
         train_loss /= len(train_data)
         test_loss /= len(test_data)

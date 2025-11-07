@@ -1,0 +1,22 @@
+
+train restent supervised: 
+python3 resten_training_supervised.py 
+
+extract embeddings with the supervised model 
+python3 extract_embeddings_supervised.py --image_dir /Users/alteafogh/Documents/ITU/Research_project/Finding_A_Nemo/dataset/cropped/cropped_train --output_file ../embeddings_files/baseline_embeddings_train.npz --model_path saved_models/resnet50_finetuned_epoch???
+
+cluster with k means 
+
+    python3 k_means.py --embedding_file ../embeddings_files/baseline_embeddings_train.npz --n_clusters 9 --output_file ../baseline_clusters/k_means_supervised.npz
+
+    python3 ami.py --clustered_file ../baseline_clusters/k_means_supervised.npz
+
+cluster with AC 
+
+    python3 agglomerative_clustering.py --embedding_file ../embeddings_files/baseline_embeddings_train.npz --n_clusters 9 --output_file ../baseline_clusters/ac_supervised.npz 
+    python3 ami.py --clustered_file ../baseline_clusters/ac_supervised.npz 
+
+cluster with HDBSCAN 
+
+    python3 hdbscan_clustering.py --embedding_file ../embeddings_files/baseline_embeddings_train.npz --min_cluster_size 10 --output_file ../baseline_clusters/hdbscan_supervised.npz
+    python3 ami.py --clustered_file ../baseline_clusters/hdbscan_supervised.npz

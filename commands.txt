@@ -78,7 +78,7 @@ c) DINOv2
     python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_train.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_train.npz
 
 d) DINOv2 Gray
-    python3 embeddings_normaliser.py --input_file ../embeddings_files/dino_embeddings_train_gray.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz
+    python3 embeddings_normaliser.py -.-input_file ../embeddings_files/dino_embeddings_train_gray.npz --output_file ../normalised_embeddings/dino_normalised_embeddings_train_gray.npz
 
 Normalise ebeddings test
 a) ResNet50 
@@ -99,7 +99,7 @@ K-means not normalised
 
     
 i) resnet50, rgb, not normalised, 9 classes 
-    python3 k_means.py --embedding_file ../embeddings_files/resnet_embeddings_train.npz --n_clusters 9 --output_file ../k_means_clusters/k_means_resnet_rgb.npz
+    python3 k_means.py --embedding_file ../embeddings_files/resnet_embeddings_train.npz --n_clusters 9 --output_file ./k_means_clusters/k_means_resnet_rgb.npz
     python3 ami.py --clustered_file ../k_means_clusters/k_means_resnet_rgb.npz
     --> 0.1976
     python3 compute_cluster_metrics.py --clustered_file ../k_means_clusters/k_means_resnet_rgb.npz --csv_file ../metrics_results/k_means_resnet_rgb.csv

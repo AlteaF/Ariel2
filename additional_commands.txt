@@ -1,4 +1,0 @@
-
-extract fish embeddings
-
-python3 extract_fish_embeddings.py 
