@@ -1,0 +1,158 @@
+CLUSTER COMPOSITION AND PURITY REPORT
+Source: ../umap_k_means_clusters/umap_km_dino_normalised_rgb.npz
+Note: Purity = (count of most frequent class) / (total points in group)
+================================================================================
+
+ANALYSIS FOR CLUSTER 0
+Total Points: 5062
+Overall Cluster Purity: 40.64% (Majority: Class 8)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity:  56.92% | Counts: C1: 104, C2: 11, C7: 103, C8: 288
+Decile 2 (10%-20%):    Purity:  44.47% | Counts: C1: 141, C2: 5, C7: 225, C8: 135
+Decile 3 (20%-30%):    Purity:  42.89% | Counts: C1: 101, C2: 16, C4: 1, C7: 217, C8: 171
+Decile 4 (30%-40%):    Purity:  58.30% | Counts: C1: 48, C2: 3, C7: 160, C8: 295
+Decile 5 (40%-50%):    Purity:  48.02% | Counts: C1: 20, C2: 11, C3: 12, C7: 243, C8: 220
+Decile 6 (50%-60%):    Purity:  40.71% | Counts: C1: 147, C2: 2, C7: 206, C8: 151
+Decile 7 (60%-70%):    Purity:  66.40% | Counts: C1: 63, C2: 4, C7: 103, C8: 336
+Decile 8 (70%-80%):    Purity:  37.75% | Counts: C1: 156, C7: 159, C8: 191
+Decile 9 (80%-90%):    Purity:  51.98% | Counts: C1: 165, C7: 78, C8: 263
+Decile 10 (90%-100%):  Purity:  84.45% | Counts: C1: 429, C7: 72, C8: 7
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 1
+Total Points: 10764
+Overall Cluster Purity: 55.13% (Majority: Class 7)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity:  56.32% | Counts: C1: 5, C2: 80, C3: 35, C4: 40, C5: 12, C7: 606, C8: 298
+Decile 2 (10%-20%):    Purity:  66.91% | Counts: C1: 6, C2: 54, C3: 70, C4: 33, C5: 66, C7: 720, C8: 127
+Decile 3 (20%-30%):    Purity:  62.64% | Counts: C1: 4, C2: 81, C3: 50, C4: 45, C5: 114, C7: 674, C8: 108
+Decile 4 (30%-40%):    Purity:  57.43% | Counts: C1: 11, C2: 70, C3: 28, C4: 107, C5: 89, C7: 618, C8: 153
+Decile 5 (40%-50%):    Purity:  53.44% | Counts: C1: 69, C2: 85, C3: 19, C4: 81, C5: 90, C7: 575, C8: 157
+Decile 6 (50%-60%):    Purity:  59.39% | Counts: C1: 45, C2: 37, C3: 42, C4: 23, C5: 177, C7: 639, C8: 113
+Decile 7 (60%-70%):    Purity:  60.97% | Counts: C1: 103, C2: 31, C3: 98, C4: 3, C5: 19, C7: 656, C8: 166
+Decile 8 (70%-80%):    Purity:  54.74% | Counts: C1: 120, C2: 14, C3: 65, C4: 3, C5: 25, C7: 589, C8: 260
+Decile 9 (80%-90%):    Purity:  36.90% | Counts: C1: 70, C2: 12, C3: 208, C4: 3, C5: 1, C7: 397, C8: 385
+Decile 10 (90%-100%):  Purity:  42.59% | Counts: C1: 138, C2: 51, C3: 201, C7: 460, C8: 230
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 2
+Total Points: 3369
+Overall Cluster Purity: 98.52% (Majority: Class 1)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity:  98.81% | Counts: C1: 332, C2: 4
+Decile 2 (10%-20%):    Purity:  96.73% | Counts: C1: 325, C2: 11
+Decile 3 (20%-30%):    Purity:  94.05% | Counts: C1: 316, C2: 19, C8: 1
+Decile 4 (30%-40%):    Purity:  99.11% | Counts: C1: 333, C2: 3
+Decile 5 (40%-50%):    Purity:  98.51% | Counts: C1: 331, C2: 4, C4: 1
+Decile 6 (50%-60%):    Purity:  99.11% | Counts: C1: 333, C2: 3
+Decile 7 (60%-70%):    Purity:  99.11% | Counts: C1: 333, C2: 3
+Decile 8 (70%-80%):    Purity:  99.70% | Counts: C1: 335, C2: 1
+Decile 9 (80%-90%):    Purity: 100.00% | Counts: C1: 336
+Decile 10 (90%-100%):  Purity: 100.00% | Counts: C1: 345
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 3
+Total Points: 4586
+Overall Cluster Purity: 57.06% (Majority: Class 2)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity:  62.45% | Counts: C2: 286, C3: 1, C7: 140, C8: 31
+Decile 2 (10%-20%):    Purity:  72.05% | Counts: C2: 330, C3: 1, C7: 125, C8: 2
+Decile 3 (20%-30%):    Purity:  60.92% | Counts: C1: 3, C2: 279, C3: 4, C4: 1, C7: 161, C8: 10
+Decile 4 (30%-40%):    Purity:  59.83% | Counts: C2: 173, C3: 3, C7: 274, C8: 8
+Decile 5 (40%-50%):    Purity:  73.36% | Counts: C2: 105, C3: 1, C7: 336, C8: 16
+Decile 6 (50%-60%):    Purity:  52.84% | Counts: C2: 156, C3: 7, C7: 242, C8: 53
+Decile 7 (60%-70%):    Purity:  53.28% | Counts: C2: 244, C3: 5, C7: 209
+Decile 8 (70%-80%):    Purity:  85.81% | Counts: C1: 2, C2: 393, C7: 63
+Decile 9 (80%-90%):    Purity:  68.78% | Counts: C1: 30, C2: 315, C7: 113
+Decile 10 (90%-100%):  Purity:  72.41% | Counts: C1: 1, C2: 336, C3: 4, C4: 1, C7: 122
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 4
+Total Points: 10083
+Overall Cluster Purity: 42.15% (Majority: Class 7)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity:  45.14% | Counts: C1: 173, C2: 5, C3: 12, C5: 2, C7: 455, C8: 361
+Decile 2 (10%-20%):    Purity:  46.73% | Counts: C1: 209, C2: 5, C3: 3, C4: 1, C5: 3, C7: 471, C8: 316
+Decile 3 (20%-30%):    Purity:  35.02% | Counts: C1: 295, C2: 3, C4: 3, C5: 3, C7: 353, C8: 351
+Decile 4 (30%-40%):    Purity:  40.97% | Counts: C1: 260, C2: 23, C3: 5, C4: 3, C5: 3, C7: 413, C8: 301
+Decile 5 (40%-50%):    Purity:  49.90% | Counts: C1: 266, C2: 16, C3: 11, C4: 2, C5: 5, C7: 503, C8: 205
+Decile 6 (50%-60%):    Purity:  58.23% | Counts: C1: 152, C2: 23, C3: 1, C4: 2, C5: 6, C7: 587, C8: 237
+Decile 7 (60%-70%):    Purity:  40.48% | Counts: C1: 337, C2: 13, C3: 1, C4: 1, C5: 8, C7: 408, C8: 240
+Decile 8 (70%-80%):    Purity:  31.94% | Counts: C1: 311, C2: 42, C3: 4, C4: 2, C5: 35, C7: 322, C8: 292
+Decile 9 (80%-90%):    Purity:  41.27% | Counts: C1: 338, C2: 8, C3: 15, C4: 2, C5: 2, C7: 416, C8: 227
+Decile 10 (90%-100%):  Purity:  54.01% | Counts: C1: 546, C2: 4, C3: 1, C7: 322, C8: 138
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 5
+Total Points: 916
+Overall Cluster Purity: 97.38% (Majority: Class 3)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity:  97.80% | Counts: C3: 89, C4: 1, C8: 1
+Decile 2 (10%-20%):    Purity:  98.90% | Counts: C2: 1, C3: 90
+Decile 3 (20%-30%):    Purity:  98.90% | Counts: C3: 90, C4: 1
+Decile 4 (30%-40%):    Purity:  98.90% | Counts: C3: 90, C5: 1
+Decile 5 (40%-50%):    Purity: 100.00% | Counts: C3: 91
+Decile 6 (50%-60%):    Purity: 100.00% | Counts: C3: 91
+Decile 7 (60%-70%):    Purity: 100.00% | Counts: C3: 91
+Decile 8 (70%-80%):    Purity:  96.70% | Counts: C3: 88, C8: 3
+Decile 9 (80%-90%):    Purity:  94.51% | Counts: C3: 86, C4: 5
+Decile 10 (90%-100%):  Purity:  88.66% | Counts: C1: 1, C3: 86, C7: 10
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 6
+Total Points: 3587
+Overall Cluster Purity: 59.49% (Majority: Class 1)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity:  80.17% | Counts: C1: 287, C2: 4, C4: 1, C7: 25, C8: 41
+Decile 2 (10%-20%):    Purity:  44.41% | Counts: C1: 104, C2: 11, C4: 1, C7: 159, C8: 83
+Decile 3 (20%-30%):    Purity:  44.97% | Counts: C1: 101, C2: 12, C3: 2, C7: 161, C8: 82
+Decile 4 (30%-40%):    Purity:  50.84% | Counts: C1: 149, C2: 4, C3: 5, C7: 182, C8: 18
+Decile 5 (40%-50%):    Purity:  99.16% | Counts: C1: 355, C2: 1, C3: 1, C7: 1
+Decile 6 (50%-60%):    Purity:  60.06% | Counts: C1: 215, C7: 96, C8: 47
+Decile 7 (60%-70%):    Purity:  73.46% | Counts: C1: 263, C3: 51, C7: 44
+Decile 8 (70%-80%):    Purity:  62.85% | Counts: C1: 225, C2: 51, C3: 1, C7: 53, C8: 28
+Decile 9 (80%-90%):    Purity:  74.86% | Counts: C1: 268, C3: 89, C8: 1
+Decile 10 (90%-100%):  Purity:  45.75% | Counts: C1: 167, C2: 93, C7: 105
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 7
+Total Points: 57
+Overall Cluster Purity: 100.00% (Majority: Class 3)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity: 100.00% | Counts: C3: 5
+Decile 2 (10%-20%):    Purity: 100.00% | Counts: C3: 5
+Decile 3 (20%-30%):    Purity: 100.00% | Counts: C3: 5
+Decile 4 (30%-40%):    Purity: 100.00% | Counts: C3: 5
+Decile 5 (40%-50%):    Purity: 100.00% | Counts: C3: 5
+Decile 6 (50%-60%):    Purity: 100.00% | Counts: C3: 5
+Decile 7 (60%-70%):    Purity: 100.00% | Counts: C3: 5
+Decile 8 (70%-80%):    Purity: 100.00% | Counts: C3: 5
+Decile 9 (80%-90%):    Purity: 100.00% | Counts: C3: 5
+Decile 10 (90%-100%):  Purity: 100.00% | Counts: C3: 12
+
+================================================================================
+
+ANALYSIS FOR CLUSTER 8
+Total Points: 148
+Overall Cluster Purity: 99.32% (Majority: Class 3)
+--------------------------------------------------
+Decile 1 ( 0%-10%):    Purity: 100.00% | Counts: C3: 14
+Decile 2 (10%-20%):    Purity: 100.00% | Counts: C3: 14
+Decile 3 (20%-30%):    Purity: 100.00% | Counts: C3: 14
+Decile 4 (30%-40%):    Purity: 100.00% | Counts: C3: 14
+Decile 5 (40%-50%):    Purity: 100.00% | Counts: C3: 14
+Decile 6 (50%-60%):    Purity: 100.00% | Counts: C3: 14
+Decile 7 (60%-70%):    Purity: 100.00% | Counts: C3: 14
+Decile 8 (70%-80%):    Purity: 100.00% | Counts: C3: 14
+Decile 9 (80%-90%):    Purity: 100.00% | Counts: C3: 14
+Decile 10 (90%-100%):  Purity:  95.45% | Counts: C1: 1, C3: 21
+
+================================================================================
+

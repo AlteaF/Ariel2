@@ -1,0 +1,8 @@
+I have made two files, one to plot the area distribution of the images, and one for the aspect ratio. 
+now I want to do the same but for each class, 
+done that and there are some discernible trends, so yay
+
+
+so I fixed the x tiicks on the plots, and then decided to figure out the reason why hdbscan upam didnt work. now it works, and I also made the code for umap+kmedoids. it will be the next thing that I run 
+
+the files with the chain commands have 2 3 cause I changed them locally but did not want to loose the results from the ucloud ones. so oops

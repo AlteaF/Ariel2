@@ -4,7 +4,7 @@ import os
 import re
 import pandas as pd
 from collections import defaultdict
-total_images_per_class_9 = { 1:18540, 2:5241, 3:3802, 4:972, 5:700, 6:613, 7:549,8:257, 9:203}
+total_images_per_class_9 = { 1:23183, 2:6528, 3:4752, 4:1212, 5:871, 6:762, 7:679,8:324, 9:261}
 # Dictionary of total images per class (can be swapped out as needed)
 #total_images_per_class_4 = { 11: 11669,1: 18543, 2: 5213, 10: 4934 }
 

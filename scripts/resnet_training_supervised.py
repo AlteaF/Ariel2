@@ -38,10 +38,10 @@ def main():
         else:
             param.requires_grad = True
 
-    for name, layer in model.named_children():
-        if name in ['conv1', 'bn1', 'layer1', 'layer2']:
-            for param in layer.parameters():
-                param.requires_grad = False
+    # for name, layer in model.named_children():
+    #     if name in ['conv1', 'bn1', 'layer1', 'layer2']:
+    #         for param in layer.parameters():
+    #             param.requires_grad = False
 
     # Replace the last layer for 9 classes
     num_features = model.fc.in_features

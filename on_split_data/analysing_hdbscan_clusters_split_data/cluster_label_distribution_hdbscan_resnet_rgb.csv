@@ -1,0 +1,48 @@
+Cluster,Class,Count,Percentage of class (%)
+-1,1,24,0.13
+-1,2,56,1.07
+-1,3,12,0.32
+-1,4,42,4.32
+-1,5,1,0.14
+-1,6,11,1.79
+-1,7,2,0.36
+-1,8,2,0.78
+-1,9,12,5.91
+0,1,18515,99.87
+0,2,5167,98.59
+0,3,3790,99.68
+0,4,930,95.68
+0,5,699,99.86
+0,6,602,98.21
+0,7,547,99.64
+0,8,255,99.22
+0,9,191,94.09
+1,1,1,0.01
+1,2,18,0.34
+
+
+Cluster -1:
+  Class 1: 24 images (0.13%)
+  Class 2: 56 images (1.07%)
+  Class 3: 12 images (0.32%)
+  Class 4: 42 images (4.32%)
+  Class 5: 1 images (0.14%)
+  Class 6: 11 images (1.79%)
+  Class 7: 2 images (0.36%)
+  Class 8: 2 images (0.78%)
+  Class 9: 12 images (5.91%)
+
+Cluster 0:
+  Class 1: 18515 images (99.87%)
+  Class 2: 5167 images (98.59%)
+  Class 3: 3790 images (99.68%)
+  Class 4: 930 images (95.68%)
+  Class 5: 699 images (99.86%)
+  Class 6: 602 images (98.21%)
+  Class 7: 547 images (99.64%)
+  Class 8: 255 images (99.22%)
+  Class 9: 191 images (94.09%)
+
+Cluster 1:
+  Class 1: 1 images (0.01%)
+  Class 2: 18 images (0.34%)
